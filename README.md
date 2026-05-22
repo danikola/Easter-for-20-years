@@ -5,3 +5,8 @@ This small app can show an Easter date and connected holidays for 20 year ahead.
 [Look how it works right here/Посмотрите, как это работает прямо здесь](https://danikola.github.io/Easter-for-20-years/)
 
   <img width="1253" height="607" alt="Pasha" src="https://github.com/user-attachments/assets/b9650c97-606b-4b91-83bb-888f3db40774" />
+
+  
+
+https://github.com/user-attachments/assets/72d2bf05-fce6-475f-8a88-ad726b9495a3
+
