@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Easter for 20 years-v2</title>
+	<style>
+		body {
+			background-color: rgb(255, 255, 255);
+		}
+
+		table,
+		th,
+		tbody,
+		td {
+			font-weight: normal;
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 2px 3px;
+		}
+
+		td {
+			text-align: center;
+		}
+		tbody tr:nth-child(even){
+			background-color: rgb(228, 226, 226);
+		}
+		#year_Row1 {
+			padding: 0px;
+
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		/* Firefox */
+		input[type=number] {
+			-moz-appearance: textfield;
+		}
+
+		#yearInput {
+			padding: 0px;
+			background-color: whitesmoke;
+			border: none;
+			text-align: center;
+		}
+		[id^="Easter_Row"] {
+			color: red;
+    	}
+	</style>
+
+</head>
+<!-- onload="wrireCurrentYear2TextField();writeEaser()" -->
+
+<body onload="wrireCurrentYear2TextField();changeOld2NewStyle()">
+	<table align="center">
+		<thead>
+			<tr>
+				<th rowspan="2">Год</th>
+				<th colspan="2">Продолжи-<br>тельность<br>мясоеда</th>
+				<th rowspan="2">Неделя<br>о мытаре<br>и фарисее<br>(начало Постной<br>Триоди)</th>
+				<th rowspan="2">Неделя<br>мястопустная</th>
+				<th rowspan="2">Неделя<br>сыропустная<br>(Прощеное<br>воскресенье)</th>
+				<th rowspan="2">Благовещение,<br>25 марта<br>(7 апреля),<br>приходится на:</th>
+				<th rowspan="2">Неделя ваий<br>(Вербное<br>воскресенье)</th>
+				<th rowspan="2" style="color: red;">ПАСХА</th>
+				<th rowspan="2">Преполовение</th>
+				<th rowspan="2">Вознесение<br>Господне</th>
+				<th rowspan="2">День Святой<br>Троицы.<br>Пятидесятница</th>
+				<th colspan="2">Продолжи-<br>тельность<br>Петрова<br>поста</th>
+			</tr>
+			<tr>
+				<th>Недель</th>
+				<th>Дней</th>
+				<th>Недель</th>
+				<th>Дней</th>
+
+			</tr>
+		</thead>
+		<tbody id="myTableBody">
+			<tr>
+				<td id="year_Row1"><input type="number" id="yearInput" name="year" value="" min="33" max="3005"
+						pattern="\d{1,4}" title="Введите год" , oninput="writeEaser()"></td>
+				<td id="non-FastDaysWeek_Row1"></td>
+				<td id="non-FastDaysDays_Row1"></td>
+				<td id="publican-and-Pharisee_Row1"></td>
+				<td id="meatfare-Week_Row1"></td>
+				<td id="cheesefare-Week_Row1"></td>
+				<td id="annunciation25_Row1"></td>
+				<td id="palm-sunday_Row1"></td>
+				<td id="Easter_Row1"></td>
+				<td id="mid-Pentecost_Row1"></td>
+				<td id="ascension40_Row1"></td>
+				<td id="pentecost50_Row1"></td>
+				<td id="length-OfPetrovPostWeeks_Row1"></td>
+				<td id="length-OfPetrovPostDays_Row1"></td>
+			</tr>
+			<tr>
+				<td id="year_Row2">2</td>
+				<td id="non-FastDaysWeek_Row2"></td>
+				<td id="non-FastDaysDays_Row2"></td>
+				<td id="publican-and-Pharisee_Row2"></td>
+				<td id="meatfare-Week_Row2"></td>
+				<td id="cheesefare-Week_Row2"></td>
+				<td id="annunciation25_Row2"></td>
+				<td id="palm-sunday_Row2"></td>
+				<td id="Easter_Row2"></td>
+				<td id="mid-Pentecost_Row2"></td>
+				<td id="ascension40_Row2"></td>
+				<td id="pentecost50_Row2"></td>
+				<td id="length-OfPetrovPostWeeks_Row2"></td>
+				<td id="length-OfPetrovPostDays_Row2"></td>
+			</tr>
+			<tr>
+				<td id="year_Row3">3</td>
+				<td id="non-FastDaysWeek_Row3"></td>
+				<td id="non-FastDaysDays_Row3"></td>
+				<td id="publican-and-Pharisee_Row3"></td>
+				<td id="meatfare-Week_Row3"></td>
+				<td id="cheesefare-Week_Row3"></td>
+				<td id="annunciation25_Row3"></td>
+				<td id="palm-sunday_Row3"></td>
+				<td id="Easter_Row3"></td>
+				<td id="mid-Pentecost_Row3"></td>
+				<td id="ascension40_Row3"></td>
+				<td id="pentecost50_Row3"></td>
+				<td id="length-OfPetrovPostWeeks_Row3"></td>
+				<td id="length-OfPetrovPostDays_Row3"></td>
+			</tr>
+			<tr>
+				<td id="year_Row4">4</td>
+				<td id="non-FastDaysWeek_Row4"></td>
+				<td id="non-FastDaysDays_Row4"></td>
+				<td id="publican-and-Pharisee_Row4"></td>
+				<td id="meatfare-Week_Row4"></td>
+				<td id="cheesefare-Week_Row4"></td>
+				<td id="annunciation25_Row4"></td>
+				<td id="palm-sunday_Row4"></td>
+				<td id="Easter_Row4"></td>
+				<td id="mid-Pentecost_Row4"></td>
+				<td id="ascension40_Row4"></td>
+				<td id="pentecost50_Row4"></td>
+				<td id="length-OfPetrovPostWeeks_Row4"></td>
+				<td id="length-OfPetrovPostDays_Row4"></td>
+			</tr>
+			<tr>
+				<td id="year_Row5">5</td>
+				<td id="non-FastDaysWeek_Row5"></td>
+				<td id="non-FastDaysDays_Row5"></td>
+				<td id="publican-and-Pharisee_Row5"></td>
+				<td id="meatfare-Week_Row5"></td>
+				<td id="cheesefare-Week_Row5"></td>
+				<td id="annunciation25_Row5"></td>
+				<td id="palm-sunday_Row5"></td>
+				<td id="Easter_Row5"></td>
+				<td id="mid-Pentecost_Row5"></td>
+				<td id="ascension40_Row5"></td>
+				<td id="pentecost50_Row5"></td>
+				<td id="length-OfPetrovPostWeeks_Row5"></td>
+				<td id="length-OfPetrovPostDays_Row5"></td>
+			</tr>
+			<tr>
+				<td id="year_Row6">6</td>
+				<td id="non-FastDaysWeek_Row6"></td>
+				<td id="non-FastDaysDays_Row6"></td>
+				<td id="publican-and-Pharisee_Row6"></td>
+				<td id="meatfare-Week_Row6"></td>
+				<td id="cheesefare-Week_Row6"></td>
+				<td id="annunciation25_Row6"></td>
+				<td id="palm-sunday_Row6"></td>
+				<td id="Easter_Row6"></td>
+				<td id="mid-Pentecost_Row6"></td>
+				<td id="ascension40_Row6"></td>
+				<td id="pentecost50_Row6"></td>
+				<td id="length-OfPetrovPostWeeks_Row6"></td>
+				<td id="length-OfPetrovPostDays_Row6"></td>
+			</tr>
+			<tr>
+				<td id="year_Row7">7</td>
+				<td id="non-FastDaysWeek_Row7"></td>
+				<td id="non-FastDaysDays_Row7"></td>
+				<td id="publican-and-Pharisee_Row7"></td>
+				<td id="meatfare-Week_Row7"></td>
+				<td id="cheesefare-Week_Row7"></td>
+				<td id="annunciation25_Row7"></td>
+				<td id="palm-sunday_Row7"></td>
+				<td id="Easter_Row7"></td>
+				<td id="mid-Pentecost_Row7"></td>
+				<td id="ascension40_Row7"></td>
+				<td id="pentecost50_Row7"></td>
+				<td id="length-OfPetrovPostWeeks_Row7"></td>
+				<td id="length-OfPetrovPostDays_Row7"></td>
+			</tr>
+			<tr>
+				<td id="year_Row8">8</td>
+				<td id="non-FastDaysWeek_Row8"></td>
+				<td id="non-FastDaysDays_Row8"></td>
+				<td id="publican-and-Pharisee_Row8"></td>
+				<td id="meatfare-Week_Row8"></td>
+				<td id="cheesefare-Week_Row8"></td>
+				<td id="annunciation25_Row8"></td>
+				<td id="palm-sunday_Row8"></td>
+				<td id="Easter_Row8"></td>
+				<td id="mid-Pentecost_Row8"></td>
+				<td id="ascension40_Row8"></td>
+				<td id="pentecost50_Row8"></td>
+				<td id="length-OfPetrovPostWeeks_Row8"></td>
+				<td id="length-OfPetrovPostDays_Row8"></td>
+			</tr>
+			<tr>
+				<td id="year_Row9">9</td>
+				<td id="non-FastDaysWeek_Row9"></td>
+				<td id="non-FastDaysDays_Row9"></td>
+				<td id="publican-and-Pharisee_Row9"></td>
+				<td id="meatfare-Week_Row9"></td>
+				<td id="cheesefare-Week_Row9"></td>
+				<td id="annunciation25_Row9"></td>
+				<td id="palm-sunday_Row9"></td>
+				<td id="Easter_Row9"></td>
+				<td id="mid-Pentecost_Row9"></td>
+				<td id="ascension40_Row9"></td>
+				<td id="pentecost50_Row9"></td>
+				<td id="length-OfPetrovPostWeeks_Row9"></td>
+				<td id="length-OfPetrovPostDays_Row9"></td>
+			</tr>
+			<tr>
+				<td id="year_Row10">10</td>
+				<td id="non-FastDaysWeek_Row10"></td>
+				<td id="non-FastDaysDays_Row10"></td>
+				<td id="publican-and-Pharisee_Row10"></td>
+				<td id="meatfare-Week_Row10"></td>
+				<td id="cheesefare-Week_Row10"></td>
+				<td id="annunciation25_Row10"></td>
+				<td id="palm-sunday_Row10"></td>
+				<td id="Easter_Row10"></td>
+				<td id="mid-Pentecost_Row10"></td>
+				<td id="ascension40_Row10"></td>
+				<td id="pentecost50_Row10"></td>
+				<td id="length-OfPetrovPostWeeks_Row10"></td>
+				<td id="length-OfPetrovPostDays_Row10"></td>
+			</tr>
+			<tr>
+				<td id="year_Row11">11</td>
+				<td id="non-FastDaysWeek_Row11"></td>
+				<td id="non-FastDaysDays_Row11"></td>
+				<td id="publican-and-Pharisee_Row11"></td>
+				<td id="meatfare-Week_Row11"></td>
+				<td id="cheesefare-Week_Row11"></td>
+				<td id="annunciation25_Row11"></td>
+				<td id="palm-sunday_Row11"></td>
+				<td id="Easter_Row11"></td>
+				<td id="mid-Pentecost_Row11"></td>
+				<td id="ascension40_Row11"></td>
+				<td id="pentecost50_Row11"></td>
+				<td id="length-OfPetrovPostWeeks_Row11"></td>
+				<td id="length-OfPetrovPostDays_Row11"></td>
+			</tr>
+			<tr>
+				<td id="year_Row12">12</td>
+				<td id="non-FastDaysWeek_Row12"></td>
+				<td id="non-FastDaysDays_Row12"></td>
+				<td id="publican-and-Pharisee_Row12"></td>
+				<td id="meatfare-Week_Row12"></td>
+				<td id="cheesefare-Week_Row12"></td>
+				<td id="annunciation25_Row12"></td>
+				<td id="palm-sunday_Row12"></td>
+				<td id="Easter_Row12"></td>
+				<td id="mid-Pentecost_Row12"></td>
+				<td id="ascension40_Row12"></td>
+				<td id="pentecost50_Row12"></td>
+				<td id="length-OfPetrovPostWeeks_Row12"></td>
+				<td id="length-OfPetrovPostDays_Row12"></td>
+			</tr>
+			<tr>
+				<td id="year_Row13">13</td>
+				<td id="non-FastDaysWeek_Row13"></td>
+				<td id="non-FastDaysDays_Row13"></td>
+				<td id="publican-and-Pharisee_Row13"></td>
+				<td id="meatfare-Week_Row13"></td>
+				<td id="cheesefare-Week_Row13"></td>
+				<td id="annunciation25_Row13"></td>
+				<td id="palm-sunday_Row13"></td>
+				<td id="Easter_Row13"></td>
+				<td id="mid-Pentecost_Row13"></td>
+				<td id="ascension40_Row13"></td>
+				<td id="pentecost50_Row13"></td>
+				<td id="length-OfPetrovPostWeeks_Row13"></td>
+				<td id="length-OfPetrovPostDays_Row13"></td>
+			</tr>
+			<tr>
+				<td id="year_Row14">14</td>
+				<td id="non-FastDaysWeek_Row14"></td>
+				<td id="non-FastDaysDays_Row14"></td>
+				<td id="publican-and-Pharisee_Row14"></td>
+				<td id="meatfare-Week_Row14"></td>
+				<td id="cheesefare-Week_Row14"></td>
+				<td id="annunciation25_Row14"></td>
+				<td id="palm-sunday_Row14"></td>
+				<td id="Easter_Row14"></td>
+				<td id="mid-Pentecost_Row14"></td>
+				<td id="ascension40_Row14"></td>
+				<td id="pentecost50_Row14"></td>
+				<td id="length-OfPetrovPostWeeks_Row14"></td>
+				<td id="length-OfPetrovPostDays_Row14"></td>
+			</tr>
+			<tr>
+				<td id="year_Row15">15</td>
+				<td id="non-FastDaysWeek_Row15"></td>
+				<td id="non-FastDaysDays_Row15"></td>
+				<td id="publican-and-Pharisee_Row15"></td>
+				<td id="meatfare-Week_Row15"></td>
+				<td id="cheesefare-Week_Row15"></td>
+				<td id="annunciation25_Row15"></td>
+				<td id="palm-sunday_Row15"></td>
+				<td id="Easter_Row15"></td>
+				<td id="mid-Pentecost_Row15"></td>
+				<td id="ascension40_Row15"></td>
+				<td id="pentecost50_Row15"></td>
+				<td id="length-OfPetrovPostWeeks_Row15"></td>
+				<td id="length-OfPetrovPostDays_Row15"></td>
+			</tr>
+			<tr>
+				<td id="year_Row16">16</td>
+				<td id="non-FastDaysWeek_Row16"></td>
+				<td id="non-FastDaysDays_Row16"></td>
+				<td id="publican-and-Pharisee_Row16"></td>
+				<td id="meatfare-Week_Row16"></td>
+				<td id="cheesefare-Week_Row16"></td>
+				<td id="annunciation25_Row16"></td>
+				<td id="palm-sunday_Row16"></td>
+				<td id="Easter_Row16"></td>
+				<td id="mid-Pentecost_Row16"></td>
+				<td id="ascension40_Row16"></td>
+				<td id="pentecost50_Row16"></td>
+				<td id="length-OfPetrovPostWeeks_Row16"></td>
+				<td id="length-OfPetrovPostDays_Row16"></td>
+			</tr>
+			<tr>
+				<td id="year_Row17">17</td>
+				<td id="non-FastDaysWeek_Row17"></td>
+				<td id="non-FastDaysDays_Row17"></td>
+				<td id="publican-and-Pharisee_Row17"></td>
+				<td id="meatfare-Week_Row17"></td>
+				<td id="cheesefare-Week_Row17"></td>
+				<td id="annunciation25_Row17"></td>
+				<td id="palm-sunday_Row17"></td>
+				<td id="Easter_Row17"></td>
+				<td id="mid-Pentecost_Row17"></td>
+				<td id="ascension40_Row17"></td>
+				<td id="pentecost50_Row17"></td>
+				<td id="length-OfPetrovPostWeeks_Row17"></td>
+				<td id="length-OfPetrovPostDays_Row17"></td>
+			</tr>
+			<tr>
+				<td id="year_Row18">18</td>
+				<td id="non-FastDaysWeek_Row18"></td>
+				<td id="non-FastDaysDays_Row18"></td>
+				<td id="publican-and-Pharisee_Row18"></td>
+				<td id="meatfare-Week_Row18"></td>
+				<td id="cheesefare-Week_Row18"></td>
+				<td id="annunciation25_Row18"></td>
+				<td id="palm-sunday_Row18"></td>
+				<td id="Easter_Row18"></td>
+				<td id="mid-Pentecost_Row18"></td>
+				<td id="ascension40_Row18"></td>
+				<td id="pentecost50_Row18"></td>
+				<td id="length-OfPetrovPostWeeks_Row18"></td>
+				<td id="length-OfPetrovPostDays_Row18"></td>
+			</tr>
+			<tr>
+				<td id="year_Row19">19</td>
+				<td id="non-FastDaysWeek_Row19"></td>
+				<td id="non-FastDaysDays_Row19"></td>
+				<td id="publican-and-Pharisee_Row19"></td>
+				<td id="meatfare-Week_Row19"></td>
+				<td id="cheesefare-Week_Row19"></td>
+				<td id="annunciation25_Row19"></td>
+				<td id="palm-sunday_Row19"></td>
+				<td id="Easter_Row19"></td>
+				<td id="mid-Pentecost_Row19"></td>
+				<td id="ascension40_Row19"></td>
+				<td id="pentecost50_Row19"></td>
+				<td id="length-OfPetrovPostWeeks_Row19"></td>
+				<td id="length-OfPetrovPostDays_Row19"></td>
+			</tr>
+			<tr>
+				<td id="year_Row20">20</td>
+				<td id="non-FastDaysWeek_Row20"></td>
+				<td id="non-FastDaysDays_Row20"></td>
+				<td id="publican-and-Pharisee_Row20"></td>
+				<td id="meatfare-Week_Row20"></td>
+				<td id="cheesefare-Week_Row20"></td>
+				<td id="annunciation25_Row20"></td>
+				<td id="palm-sunday_Row20"></td>
+				<td id="Easter_Row20"></td>
+				<td id="mid-Pentecost_Row20"></td>
+				<td id="ascension40_Row20"></td>
+				<td id="pentecost50_Row20"></td>
+				<td id="length-OfPetrovPostWeeks_Row20"></td>
+				<td id="length-OfPetrovPostDays_Row20"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- =============== -->
+	<p align="center">
+		<input type="checkbox" title="Кликните для смены стиля календаря" name="checkboxStyle" id="checkbox_Style" checked onchange="changeOld2NewStyle()", style="margin-right: -1px"></input>
+		<label for="checkbox_Style" id="labelStyle", style="margin-left: -2px", title="Кликните для смены стиля календаря">
+			&#42Все даты по старому стилю
+		</label>
+	</p>
+
+	<script>
+		let checkboxStyleChecked = document.getElementById("checkbox_Style");
+		function changeOld2NewStyle(){
+			let myLabelStyle = document.getElementById("labelStyle");
+			myLabelStyle.innerText = checkboxStyleChecked.checked ? "\u002aВсе даты по старому стилю" : "\u002aВсе даты по новому стилю"
+
+			writeEaser(checkboxStyleChecked.checked);
+		}
+		function wrireCurrentYear2TextField() {
+			const currentYear = new Date().getFullYear();
+			document.getElementById("yearInput").value = currentYear;
+		}
+		function writeEaser(Style = true) {
+			let myInputYear = Number(document.getElementById("yearInput").value);
+			if (myInputYear<33||myInputYear>3005){
+				alert("Введите год больше 32\nи меньше 3005");
+				// myInputYear = new Date().getFullYear();
+				return;
+			}
+			const arrEasterOld = ["22 марта", "23 марта", "24 марта", "25 марта", "26 марта", "27 марта", "28 марта", "29 марта", "30 марта", "31 марта", "1 апреля", "2 апреля", "3 апреля", "4 апреля", "5 апреля", "6 апреля", "7 апреля", "8 апреля", "9 апреля", "10 апреля", "11 апреля", "12 апреля", "13 апреля", "14 апреля", "15 апреля", "16 апреля", "17 апреля", "18 апреля", "19 апреля", "20 апреля", "21 апреля", "22 апреля", "23 апреля", "24 апреля", "25 апреля"];
+			const arrEasterNew = ["4 апреля", "5 апреля", "6 апреля", "7 апреля", "8 апреля", "9 апреля", "10 апреля", "11 апреля", "12 апреля", "13 апреля", "14 апреля", "15 апреля", "16 апреля", "17 апреля", "18 апреля", "19 апреля", "20 апреля", "21 апреля", "22 апреля", "23 апреля", "24 апреля", "25 апреля", "26 апреля", "27 апреля", "28 апреля", "29 апреля", "30 апреля", "1 мая", "2 мая", "3 мая", "4 мая", "5 мая", "6 мая", "7 мая", "8 мая"];
+
+			const non_fastDays = ["4.4", "4.5", "4.6", "5", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "6", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9", "9.1", "9.2", "9.3"];
+			const publican_and_PhariseeOld = ["11 января", "12 января", "13 января", "14 января", "15 января", "16 января", "17 января", "18 января", "19 января", "20 января", "21 января", "22 января", "23 января", "24 января", "25 января", "26 января", "27 января", "28 января", "29 января", "30 января", "31 января", "1 февраля", "2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля"];
+			const publican_and_PhariseeNew = ["24 января", "25 января", "26 января", "27 января", "28 января", "29 января", "30 января", "31 января", "1 февраля", "2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля"];
+			const meatfare_WeekOld = ["25 января", "26 января", "27 января", "28 января", "29 января", "30 января", "31 января", "1 февраля", "2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля"];
+			const meatfare_WeekNew = ["7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля", "1 марта", "2 марта", "3 марта", "4 марта", "5 марта", "6 марта", "7 марта", "8 марта", "9 марта", "10 марта", "11 марта", "12 марта", "13 марта"];
+			const cheesefare_WeekOld = ["1 февраля", "2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля", "1 марта", "2 марта", "3 марта", "4 марта", "5 марта", "6 марта", "7 марта"];
+			const cheesefare_WeekNew = ["14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля", "1 марта", "2 марта", "3 марта", "4 марта", "5 марта", "6 марта", "7 марта", "8 марта", "9 марта", "10 марта", "11 марта", "12 марта", "13 марта", "14 марта", "15 марта", "16 марта", "17 марта", "18 марта", "19 марта", "20 марта"];
+
+			//Для високосного года
+			const non_fastDaysL = ["4.5", "4.6", "5", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "6", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9", "9.1", "9.2", "9.3", "9.4"];
+			const publican_and_PhariseeLOld = ["12 января", "13 января", "14 января", "15 января", "16 января", "17 января", "18 января", "19 января", "20 января", "21 января", "22 января", "23 января", "24 января", "25 января", "26 января", "27 января", "28 января", "29 января", "30 января", "31 января", "1 февраля", "2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля"];
+			const publican_and_PhariseeLNew = ["25 января", "26 января", "27 января", "28 января", "29 января", "30 января", "31 января", "1 февраля", "2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля"];
+			const meatfare_WeekLOld = ["26 января", "27 января", "28 января", "29 января", "30 января", "31 января", "1 февраля", "2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля", "29 февраля"];
+			const meatfare_WeekLNew = ["8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля", "29 февраля", "1 марта", "2 марта", "3 марта", "4 марта", "5 марта", "6 марта", "7 марта", "8 марта", "9 марта", "10 марта", "11 марта", "12 марта", "13 марта"];
+			const cheesefare_WeekLOld = ["2 февраля", "3 февраля", "4 февраля", "5 февраля", "6 февраля", "7 февраля", "8 февраля", "9 февраля", "10 февраля", "11 февраля", "12 февраля", "13 февраля", "14 февраля", "15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля", "29 февраля", "1 марта", "2 марта", "3 марта", "4 марта", "5 марта", "6 марта", "7 марта"];
+			const cheesefare_WeekLNew = ["15 февраля", "16 февраля", "17 февраля", "18 февраля", "19 февраля", "20 февраля", "21 февраля", "22 февраля", "23 февраля", "24 февраля", "25 февраля", "26 февраля", "27 февраля", "28 февраля", "29 февраля", "1 марта", "2 марта", "3 марта", "4 марта", "5 марта", "6 марта", "7 марта", "8 марта", "9 марта", "10 марта", "11 марта", "12 марта", "13 марта", "14 марта", "15 марта", "16 марта", "17 марта", "18 марта", "19 марта", "20 марта"];
+
+
+			const annunciation = ["Среду Светлой седмицы", "Вторник Светлой седмицы", "Понедельник Светлой седмицы", "Кириопасху", "Великую Субботу", "Великую Пятницу", "Великий Четверг", "Великую Среду", "Великий Вторник", "Великий Понедельник", "Неделю ваий", "Лазареву Субботу", "Пятницу 6-й седмицы", "Четверг 6-й седмицы", "Среду 6-й седмицы", "Вторник 6-й седмицы", "Понедельник 6-й седмицы", "Неделю 5-ю", "Субботу 5-й седмицы", "Пятницу 5-й седмицы", "Четверг 5-й седмицы", "Среду 5-й седмицы", "Вторник 5-й седмицы", "Понедельник 5-й седмицы", "Неделю 4-ю", "Субботу 4-й седмицы", "Пятницу 4-й седмицы", "Четверг 4-й седмицы", "Среду 4-й седмицы", "Вторник 4-й седмицы", "Понедельник 4-й седмицы", "Неделю 3-ю", "Субботу 3-й седмицы", "Пятницу 3-й седмицы", "Четверг 3-й седмицы"];
+			const palmSundayOld = ["15 марта", "16 марта", "17 марта", "18 марта", "19 марта", "20 марта", "21 марта", "22 марта", "23 марта", "24 марта", "25 марта", "26 марта", "27 марта", "28 марта", "29 марта", "30 марта", "31 марта", "1 апреля", "2 апреля", "3 апреля", "4 апреля", "5 апреля", "6 апреля", "7 апреля", "8 апреля", "9 апреля", "10 апреля", "11 апреля", "12 апреля", "13 апреля", "14 апреля", "15 апреля", "16 апреля", "17 апреля", "18 апреля"];
+			const palmSundayNew = ["28 марта", "29 марта", "30 марта", "31 марта", "1 апреля", "2 апреля", "3 апреля", "4 апреля", "5 апреля", "6 апреля", "7 апреля", "8 апреля", "9 апреля", "10 апреля", "11 апреля", "12 апреля", "13 апреля", "14 апреля", "15 апреля", "16 апреля", "17 апреля", "18 апреля", "19 апреля", "20 апреля", "21 апреля", "22 апреля", "23 апреля", "24 апреля", "25 апреля", "26 апреля", "27 апреля", "28 апреля", "29 апреля", "30 апреля", "1 мая"];
+			const midPentecostOld = ["15 апреля", "16 апреля", "17 апреля", "18 апреля", "19 апреля", "20 апреля", "21 апреля", "22 апреля", "23 апреля", "24 апреля", "25 апреля", "26 апреля", "27 апреля", "28 апреля", "29 апреля", "30 апреля", "1 мая", "2 мая", "3 мая", "4 мая", "5 мая", "6 мая", "7 мая", "8 мая", "9 мая", "10 мая", "11 мая", "12 мая", "13 мая", "14 мая", "15 мая", "16 мая", "17 мая", "18 мая", "19 мая"];
+			const midPentecostNew = ["28 апреля", "29 апреля", "30 апреля", "01 мая", "02 мая", "03 мая", "04 мая", "05 мая", "06 мая", "07 мая", "08 мая", "09 мая", "10 мая", "11 мая", "12 мая", "13 мая", "14 мая", "15 мая", "16 мая", "17 мая", "18 мая", "19 мая", "20 мая", "21 мая", "22 мая", "23 мая", "24 мая", "25 мая", "26 мая", "27 мая", "28 мая", "29 мая", "30 мая", "31 мая", "01 июня"];
+			const ascensionOld = ["30 апреля", "1 мая", "2 мая", "3 мая", "4 мая", "5 мая", "6 мая", "7 мая", "8 мая", "9 мая", "10 мая", "11 мая", "12 мая", "13 мая", "14 мая", "15 мая", "16 мая", "17 мая", "18 мая", "19 мая", "20 мая", "21 мая", "22 мая", "23 мая", "24 мая", "25 мая", "26 мая", "27 мая", "28 мая", "29 мая", "30 мая", "31 мая", "1 июня", "2 июня", "3 июня"];
+			const ascensionNew = ["13 мая", "14 мая", "15 мая", "16 мая", "17 мая", "18 мая", "19 мая", "20 мая", "21 мая", "22 мая", "23 мая", "24 мая", "25 мая", "26 мая", "27 мая", "28 мая", "29 мая", "30 мая", "31 мая", "1 июня", "2 июня", "3 июня", "4 июня", "5 июня", "6 июня", "7 июня", "8 июня", "9 июня", "10 июня", "11 июня", "12 июня", "13 июня", "14 июня", "15 июня", "16 июня"];
+			const pentecostOld = ["10 мая", "11 мая", "12 мая", "13 мая", "14 мая", "15 мая", "16 мая", "17 мая", "18 мая", "19 мая", "20 мая", "21 мая", "22 мая", "23 мая", "24 мая", "25 мая", "26 мая", "27 мая", "28 мая", "29 мая", "30 мая", "31 мая", "1 июня", "2 июня", "3 июня", "4 июня", "5 июня", "6 июня", "7 июня", "8 июня", "9 июня", "10 июня", "11 июня", "12 июня", "13 июня"];
+			const pentecostNew = ["23 мая", "24 мая", "25 мая", "26 мая", "27 мая", "28 мая", "29 мая", "30 мая", "31 мая", "1 июня", "2 июня", "3 июня", "4 июня", "5 июня", "6 июня", "7 июня", "8 июня", "9 июня", "10 июня", "11 июня", "12 июня", "13 июня", "14 июня", "15 июня", "16 июня", "17 июня", "18 июня", "19 июня", "20 июня", "21 июня", "22 июня", "23 июня", "24 июня", "25 июня", "26 июня"];
+			const lengthOfPetrovPost = ["6", "5.6", "5.5", "5.4", "5.3", "5.2", "5.1", "5", "4.6", "4.5", "4.4", "4.3", "4.2", "4.1", "4", "3.6", "3.5", "3.4", "3.3", "3.2", "3.1", "3", "2.6", "2.5", "2.4", "2.3", "2.2", "2.1", "2", "1.6", "1.5", "1.4", "1.3", "1.2", "1.1"];
+
+			//
+			function getWeeks(arrElement){
+				if(arrElement.indexOf(".") != -1){
+					return arrElement[0];
+				}else{
+					return arrElement;
+				}
+			}
+			function getDays(arrElement){
+				if(arrElement.indexOf(".") != -1){
+					return arrElement[arrElement.length-1];
+				}else{
+					return "-";
+				}
+			}
+
+			//
+			
+			for(let i = 1, j = myInputYear; i < 20, j < myInputYear + 20; i++, j++){
+				let indexEaster = checkboxStyleChecked.checked ? arrEasterOld.indexOf(getEaster(j, checkboxStyleChecked.checked)) : arrEasterNew.indexOf(getEaster(j, checkboxStyleChecked.checked));
+				let leapYear = isLeapYear(j);
+				if(i>1){
+					document.getElementById("year_Row" + i).innerText = j;
+				}
+				if (leapYear) {
+					document.getElementById("non-FastDaysWeek_Row" + i).innerText = getWeeks(non_fastDaysL[indexEaster]);//мясоястия седмиц
+					document.getElementById("non-FastDaysDays_Row" + i).innerText = getDays(non_fastDaysL[indexEaster]);//мясоястия дней
+					document.getElementById("publican-and-Pharisee_Row" + i).innerText = checkboxStyleChecked.checked ? publican_and_PhariseeLOld[indexEaster] : publican_and_PhariseeLNew[indexEaster];//мытаря и фарисея
+					document.getElementById("meatfare-Week_Row" + i).innerText =  checkboxStyleChecked.checked ? meatfare_WeekLOld[indexEaster] : meatfare_WeekLNew[indexEaster];//неделя мясопустная
+					document.getElementById("cheesefare-Week_Row" + i).innerText = checkboxStyleChecked.checked ? cheesefare_WeekLOld[indexEaster] : cheesefare_WeekLNew[indexEaster];//неделя сыропустная
+				}
+				else {
+					document.getElementById("non-FastDaysWeek_Row" + i).innerText = getWeeks(non_fastDays[indexEaster]);//мясоястия седмиц
+					document.getElementById("non-FastDaysDays_Row" + i).innerText = getDays(non_fastDays[indexEaster]);//мясоястия дней
+					document.getElementById("publican-and-Pharisee_Row" + i).innerText = checkboxStyleChecked.checked ? publican_and_PhariseeOld[indexEaster] : publican_and_PhariseeNew[indexEaster];//мытаря и фарисея
+					document.getElementById("meatfare-Week_Row" + i).innerText = checkboxStyleChecked.checked ? meatfare_WeekOld[indexEaster] : meatfare_WeekNew[indexEaster];//неделя мясопустная
+					document.getElementById("cheesefare-Week_Row" + i).innerText = checkboxStyleChecked.checked ? cheesefare_WeekOld[indexEaster] : cheesefare_WeekNew[indexEaster];//неделя сыропустная
+				}
+
+				document.getElementById("annunciation25_Row" + i).innerText = annunciation[indexEaster];//Благовещение
+				document.getElementById("palm-sunday_Row" + i).innerText = checkboxStyleChecked.checked ? palmSundayOld[indexEaster] : palmSundayNew[indexEaster];//Неделя ваий
+				document.getElementById("Easter_Row" + i).innerText = getEaster(j, checkboxStyleChecked.checked);//ПАСХА
+				document.getElementById("mid-Pentecost_Row" + i).innerText = checkboxStyleChecked.checked ? midPentecostOld[indexEaster] : midPentecostNew[indexEaster];//Преполовение
+				document.getElementById("ascension40_Row" + i).innerText = checkboxStyleChecked.checked ? ascensionOld[indexEaster] : ascensionNew[indexEaster];//Вознесение
+				document.getElementById("pentecost50_Row" + i).innerText = checkboxStyleChecked.checked ? pentecostOld[indexEaster] : pentecostNew[indexEaster];//Пятидесятница
+				document.getElementById("length-OfPetrovPostWeeks_Row" + i).innerText = getWeeks(lengthOfPetrovPost[indexEaster]);//длина Петрова поста недель
+				document.getElementById("length-OfPetrovPostDays_Row" + i).innerText = getDays(lengthOfPetrovPost[indexEaster]);//длина Петрова поста дней
+			}
+						
+		}
+
+		function isLeapYear(Year) {
+			return (Year % 400 === 0) || (Year % 100 !== 0 && Year % 4 === 0);
+		}
+
+		/*Скрипт создал DAN, ел. почта: niko1987a@yandex.ru или niko1987nk@gmail.com.   // VK: https://vk.com/id547800930*/
+		function getEaster(Year, Style = true) {	//true — (Old Style); false — (New Style)
+			function getVrutseleto(Year) {
+				const vrutseletoArray = [1, 2, 3, 5, 6, 7, 1, 3, 4, 5, 6, 1, 2, 3, 4, 6, 7, 1, 2, 4, 5, 6, 7, 2, 3, 4, 5, 7];
+				if (Year <= 3005 && Year >= 9) {
+					for (var i = Year; i >= 9; i = i - 28) {
+					}
+					if (i < Year) {
+						i = i + 28;
+					}
+					return vrutseletoArray[i - 9];
+				}
+			}
+			function getBaseMoon(Year) {
+				const osnovanieLunyArray = [14, 25, 6, 17, 28, 9, 20, 1, 12, 23, 4, 15, 26, 7, 18, 29, 11, 22, 3];
+				if (Year <= 3005 && Year >= 3) {
+					for (var j = Year; j >= 3; j = j - 19) {
+					}
+					if (j < Year) {
+						j = j + 19;
+					}
+					return osnovanieLunyArray[j - 3];
+				}
+			}
+			var vrutseleto = getVrutseleto(Year);
+			var baseMoon = getBaseMoon(Year);
+			var easterTmp;
+			//
+			switch (true) {//start switch
+				//1, 27-30
+				case (baseMoon == 1 || (baseMoon >= 27 && baseMoon <= 30)):
+					var arr27_30 = ["A", "B", 27, 28, 29, 30, 1];
+					for (var x = 0; x <= vrutseleto - 1; x++) {
+						if (arr27_30[x] == baseMoon) {
+							easterTmp = littleFinger();
+							return easterTmp;
+						}
+					}
+					easterTmp = ringFinger();
+					break;
+				//2-8
+				case (baseMoon >= 2 && baseMoon <= 8):
+					var arr2_8 = [2, 3, 4, 5, 6, 7, 8];
+					for (var x = 0; x <= vrutseleto - 1; x++) {
+						if (arr2_8[x] == baseMoon) {
+							easterTmp = ringFinger();
+							return easterTmp;
+						}
+					}
+					easterTmp = middleFinger();
+					break;
+				//9-15
+				case (baseMoon >= 9 && baseMoon <= 15):
+					var arr9_15 = [9, 10, 11, 12, 13, 14, 15];
+					for (var x = 0; x <= vrutseleto - 1; x++) {
+						if (arr9_15[x] == baseMoon) {
+							easterTmp = middleFinger();
+							return easterTmp;
+						}
+					}
+					easterTmp = indexFinger();
+					break;
+				//16-22
+				case (baseMoon >= 16 && baseMoon <= 22):
+					var arr16_22 = [16, 17, 18, 19, 20, 21, 22];
+					for (var x = 0; x <= vrutseleto - 1; x++) {
+						if (arr16_22[x] == baseMoon) {
+							easterTmp = indexFinger();
+							return easterTmp;
+						}
+					}
+					easterTmp = bigFinger();
+					break;
+				//23-26
+				case (baseMoon >= 23 && baseMoon <= 26):
+					var arr23_26 = [23, 24, 25, 26, "C", "D", "E"];
+					for (var x = 0; x <= vrutseleto - 1; x++) {
+						if (arr23_26[x] == baseMoon) {
+							easterTmp = bigFinger();
+							return easterTmp;
+						}
+					}
+					easterTmp = littleFinger();
+					break;
+			}//end switch
+			return easterTmp;
+			//additional functions
+			function littleFinger() {
+				var littleFingerArrOld = ["24 марта", "23 марта", "22 марта", "25 апреля", "24 апреля", "23 апреля", "22 апреля"];
+				var littleFingerArrNew = ["6 апреля", "5 апреля", "4 апреля", "8 мая", "7 мая", "6 мая", "5 мая"];
+				return Style ? littleFingerArrOld[vrutseleto - 1] : littleFingerArrNew[vrutseleto - 1];
+			}
+			function bigFinger() {
+				var bigFingerArrOld = ["31 марта", "30 марта", "29 марта", "28 марта", "27 марта", "26 марта", "25 марта"];
+				var bigFingerArrNew = ["13 апреля", "12 апреля", "11 апреля", "10 апреля", "9 апреля", "8 апреля", "7 апреля"];
+				return Style ? bigFingerArrOld[vrutseleto - 1] : bigFingerArrNew[vrutseleto - 1];
+			}
+			function indexFinger() {
+				var indexFingerArrOld = ["7 апреля", "6 апреля", "5 апреля", "4 апреля", "3 апреля", "2 апреля", "1 апреля"];
+				var indexFingerArrNew = ["20 апреля", "19 апреля", "18 апреля", "17 апреля", "16 апреля", "15 апреля", "14 апреля"];
+				return Style ? indexFingerArrOld[vrutseleto - 1] : indexFingerArrNew[vrutseleto - 1];
+			}
+			function middleFinger() {
+				var middleFingerArrOld = ["14 апреля", "13 апреля", "12 апреля", "11 апреля", "10 апреля", "9 апреля", "8 апреля"];
+				var middleFingerArrNew = ["27 апреля", "26 апреля", "25 апреля", "24 апреля", "23 апреля", "22 апреля", "21 апреля"];
+				return Style ? middleFingerArrOld[vrutseleto - 1] : middleFingerArrNew[vrutseleto - 1];
+			}
+			function ringFinger() {
+				var ringFingerArrOld = ["21 апреля", "20 апреля", "19 апреля", "18 апреля", "17 апреля", "16 апреля", "15 апреля"];
+				var ringFingerArrNew = ["4 мая", "3 мая", "2 мая", "1 мая", "30 апреля", "29 апреля", "28 апреля"];
+				return Style ? ringFingerArrOld[vrutseleto - 1] : ringFingerArrNew[vrutseleto - 1];
+			}
+
+		}
+	</script>
+</body>
+
+</html>
